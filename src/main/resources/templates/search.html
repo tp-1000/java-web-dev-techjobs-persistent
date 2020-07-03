@@ -38,6 +38,11 @@
 
 
     <table class="job-listing">
+        <tr th:if="${jobs}" th:unless="${jobs.iterator().hasNext()}">
+            <td>
+                <p>No Jobs Found</p>
+            </td>
+        </tr>
         <tr th:each="job : ${jobs}">
             <td>
                 <p>

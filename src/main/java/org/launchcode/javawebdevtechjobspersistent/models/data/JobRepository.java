@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import javax.transaction.Transactional;
 
 @Repository
-@Transactional
+@Transactional //https://dzone.com/articles/how-does-spring-transactional
+//away to handle multiple potential manipulations to the same set of data.
+//test what happens with coding_event and start a few sessions and edit the same data.
 public interface JobRepository extends CrudRepository<Job, Integer> {
 }
